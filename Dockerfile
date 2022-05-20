@@ -4,7 +4,7 @@ LABEL maintainer "Baohua Yang <yangbaohua@gmail.com>"
 ENV DEBIAN_FRONTEND noninteractive
 
 
-ENV $PORT 80
+ENV PORT 80
 
 
 RUN  apt update&& apt install wget tar sudo -y
@@ -18,9 +18,9 @@ RUN wget https://dist.ipfs.io/go-ipfs/v0.12.2/go-ipfs_v0.12.2_linux-amd64.tar.gz
 
 
 # config the gateway endpoint
-RUN ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/${$PORT}
+RUN ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/{$PORT}
 
-
+RUN ${PORT:-80}
 # by default, run `ipfs daemon` to start as a running node
 ENTRYPOINT ["ipfs"]
 CMD ["daemon"]
