@@ -4,7 +4,7 @@ LABEL maintainer "Baohua Yang <yangbaohua@gmail.com>"
 ENV DEBIAN_FRONTEND noninteractive
 
 
-ENV PORT 80
+
 
 
 RUN  apt update&& apt install wget tar sudo -y
