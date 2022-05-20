@@ -13,7 +13,7 @@ ENV GATEWAY_PORT 80
 #EXPOSE ${GATEWAY_PORT}
 
 # Install ipfs using ipfs-update and initialize
-RUN go get -u github.com/ipfs/ipfs-update \
+RUN go install github.com/ipfs/ipfs-update \
     && ipfs-update install latest \
     && ipfs init
 
