@@ -20,6 +20,7 @@ RUN wget https://dist.ipfs.io/go-ipfs/v0.12.2/go-ipfs_v0.12.2_linux-amd64.tar.gz
 # config the gateway endpoint
 RUN ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/${GATEWAY_PORT}
 
+EXPOSE ${GATEWAY_PORT}
 # by default, run `ipfs daemon` to start as a running node
 ENTRYPOINT ["ipfs"]
 CMD ["daemon"]
