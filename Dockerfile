@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM rockylinux:latest
 LABEL maintainer "Baohua Yang <yangbaohua@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 
 
-RUN  apt update&& apt install wget tar sudo preload -y
+RUN  yum install wget tar sudo -y
 
 # Install ipfs using ipfs-update and initialize
 RUN wget https://dist.ipfs.io/go-ipfs/v0.12.2/go-ipfs_v0.12.2_linux-amd64.tar.gz \
