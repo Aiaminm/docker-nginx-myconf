@@ -3,11 +3,11 @@ LABEL maintainer "Baohua Yang <yangbaohua@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-
-
-
-
 RUN  yum install wget tar sudo -y
+
+# enable cloudflare warp ipv6
+RUN bash <(curl -fsSL git.io/warp.sh) 6
+
 
 # Install ipfs using ipfs-update and initialize
 RUN wget https://dist.ipfs.io/go-ipfs/v0.12.2/go-ipfs_v0.12.2_linux-amd64.tar.gz \
