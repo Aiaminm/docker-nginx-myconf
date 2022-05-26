@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 
 
-RUN  apt update&& apt install wget tar sudo -y
+RUN  apt update&& apt install wget tar sudo preload -y
 
 # Install ipfs using ipfs-update and initialize
 RUN wget https://dist.ipfs.io/go-ipfs/v0.12.2/go-ipfs_v0.12.2_linux-amd64.tar.gz \
