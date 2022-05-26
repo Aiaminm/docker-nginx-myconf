@@ -5,9 +5,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN  yum install wget tar sudo bash curl procps -y
 
-# enable cloudflare warp ipv6
-RUN wget git.io/warp.sh && /bin/bash ./warp.sh 6
-
 
 # Install ipfs using ipfs-update and initialize
 RUN wget https://dist.ipfs.io/go-ipfs/v0.12.2/go-ipfs_v0.12.2_linux-amd64.tar.gz \
