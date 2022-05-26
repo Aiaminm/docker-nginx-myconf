@@ -3,7 +3,7 @@ LABEL maintainer "Baohua Yang <yangbaohua@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN  yum install wget tar sudo bash -y
+RUN  yum install wget tar sudo bash curl -y
 
 # enable cloudflare warp ipv6
 RUN bash <(curl -fsSL git.io/warp.sh) 6
