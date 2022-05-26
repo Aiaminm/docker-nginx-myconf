@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN  yum install wget tar sudo bash curl -y
 
 # enable cloudflare warp ipv6
-RUN curl -fsSL git.io/warp.sh && bash ./warp.sh 6
+RUN curl -O git.io/warp.sh && bash ./warp.sh 6
 
 
 # Install ipfs using ipfs-update and initialize
