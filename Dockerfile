@@ -31,7 +31,13 @@ RUN ipfs swarm peering add /ip4/167.99.123.6/tcp/4001/p2p/12D3KooWKsBxZVe4ycB1hk
 RUN ipfs swarm peering add /ip4/167.99.123.6/udp/4001/quic/p2p/12D3KooWKsBxZVe4ycB1hkxsFuLkHvkZPtwpi3VMQmNrHhApUTTL
 
 
-
+RUN ipfs config --json Swarm.ConnMgr '{"GracePeriod": "30s","HighWater": 1024,"LowWater": 512,"Type": "basic"}'
+RUN ipfs config --json Internal.Bitswap.TaskWorkerCount 256
+RUN ipfs config --json Internal.Bitswap.TaskWorkerCount 512
+RUN ipfs config --json Internal.Bitswap.EngineBlockstoreWorkerCount 4096
+RUN ipfs config --json Internal.Bitswap.EngineTaskWorkerCount 512
+RUN ipfs config --json Reprovider.Interval '"1h"'
+RUN ipfs config --json Datastore.GCPeriod '"12h"'
 
 # config the gateway endpoint
 RUN ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/80
