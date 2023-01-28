@@ -1,4 +1,4 @@
-FROM rockylinux:9
+FROM rockylinux:8
 LABEL maintainer "Baohua Yang <yangbaohua@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
