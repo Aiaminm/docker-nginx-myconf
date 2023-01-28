@@ -1,5 +1,5 @@
 FROM rockylinux:8
-LABEL maintainer "Baohua Yang <yangbaohua@gmail.com>"
+EXPOSE 80
 
 ENV DEBIAN_FRONTEND noninteractive
 
