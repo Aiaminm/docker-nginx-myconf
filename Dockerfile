@@ -19,12 +19,7 @@ RUN ipfs config --json Peering.Peers [{"Addrs":["/dns4/checkpoint-hk.ipns.networ
 
 
 
-RUN ipfs config --json Internal.Bitswap.TaskWorkerCount 256
-RUN ipfs config --json Internal.Bitswap.TaskWorkerCount 512
-RUN ipfs config --json Internal.Bitswap.EngineBlockstoreWorkerCount 4096
-RUN ipfs config --json Internal.Bitswap.EngineTaskWorkerCount 512
-RUN ipfs config --json Reprovider.Interval '"1h"'
-RUN ipfs config --json Datastore.GCPeriod '"12h"'
+
 
 # config the gateway endpoint
 RUN ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/80
