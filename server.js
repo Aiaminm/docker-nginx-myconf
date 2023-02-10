@@ -23,7 +23,9 @@ const HOST = '0.0.0.0';
 app.use('/',createProxyMiddleware({ target: "https://ipfs.io", changeOrigin: true })
 
 
-app.listen(PORT, HOST);
 
+app.listen(PORT, () => {
+  console.log(`server running @${PORT}`);
+});
 
 
