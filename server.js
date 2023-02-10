@@ -19,7 +19,7 @@ const PORT = 80;
 const HOST = '0.0.0.0';
 
 
-app.use('/',createProxyMiddleware({ target: "https://ipfs.io", changeOrigin: true })
+app.use('/',createProxyMiddleware({ target: "https://ipfs.io", changeOrigin: true }))
 
 
 
