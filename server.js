@@ -1,12 +1,11 @@
 
-const cors = require('cors');
 const express = require('express');
 const timeout = require('connect-timeout');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 
 const app = express();
-app.use(cors());
+
 
 const TIME_OUT = "60s";
 app.use(timeout(TIME_OUT));
